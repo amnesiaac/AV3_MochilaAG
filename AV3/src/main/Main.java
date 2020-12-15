@@ -20,7 +20,7 @@ public class Main {
     	  for (int i = 0; i < objetos.size(); i++) {                             
     		  System.out.println("Peso: "+objetos.get(i).getPeso()+"Valor: "+objetos.get(i).getValor()); //todos os objetos gerados são printados em tela
 		}
-    	 System.out.println("O codigo está selecionando, aguarde aproximadamente 30 segundos");
+    	 System.out.println("O codigo está selecionando, aguarde aproximadamente 25 segundos");
     	 MochilaObjetos mochila = new MochilaObjetos(objetos); //objeto do tipo MochilaObjetos é criado
     	 ArrayList<Cromossomo>populacao = mochila.getPopulacao(); //Array de cromossomos é criado sendo preenchido por um array na classe MochilaObjetos
     	 System.out.println("Objetos selecionados para a mochila");
@@ -28,11 +28,9 @@ public class Main {
 			if(populacao.get(0).pertinencia[i]==1) {
 				if(objetos.get(i).getValor()!=0.0) { 
 				     c += objetos.get(i).getPeso();       //os objetos da Array de objetos em MochilaObjetos são selecionados para o array de objetosfinal até que o peso maximo seja 15
-				     if(c>15) {
-				    	 break;
-				     }else {
-				    	 objetosfinal.add(objetos.get(i));
-				     }
+				
+				 	 objetosfinal.add(objetos.get(i));
+				   
 				     
 				
 				}

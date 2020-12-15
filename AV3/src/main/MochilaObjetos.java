@@ -17,9 +17,9 @@ protected ArrayList<Objeto>objetos;
  
       private void Executar() {
     	  
-    	  long t= System.currentTimeMillis();
+    	 long t= System.currentTimeMillis();
           long end = t+25000;
-           while(System.currentTimeMillis() < end) {
+          while(System.currentTimeMillis() < end) {
     	    		 crossover(populacao,6);
     	      	     mutacao(populacao,6);            //durabte 25 segundos o metodo executar irá chamar os metodos crossover,mutacao,avaliar e ordenarElite
     	      	     avaliar(populacao,objetos);
